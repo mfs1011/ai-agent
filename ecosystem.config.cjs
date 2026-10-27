@@ -2,7 +2,7 @@
 module.exports = {
   apps: [
     {
-      name: "universal-agent",
+      name: "ai-agent",
       script: "src/index.ts",
       interpreter: "node",
       interpreter_args: "--env-file-if-exists=.env",

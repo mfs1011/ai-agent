@@ -1,4 +1,4 @@
-# Universal AI Agent (Telegram)
+# AI Agent (Telegram)
 
 Telegram orqali boshqariladigan shaxsiy AI agent. LLM — **Antigravity CLI** (`agy -p ... --output-format json`), API emas.
 
@@ -61,7 +61,7 @@ Ubuntu 22.04+/Debian 12+, 2 vCPU / 4 GB yetarli. Kompyuteringizdan:
 ssh-copy-id root@IP                              # bir marta: SSH kalit
 ./scripts/deploy.sh root@IP --with-data          # birinchi deploy + lokal bazani ko'chirish
 ssh -t agent@IP '~/.local/bin/agy'               # bir marta: agy login (havolani brauzerda oching), /exit
-ssh agent@IP 'pm2 restart universal-agent'
+ssh agent@IP 'pm2 restart ai-agent'
 ```
 Keyingi yangilashlar: `./scripts/deploy.sh root@IP --update`.
 
