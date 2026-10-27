@@ -1,4 +1,4 @@
-# universal-agent — agentlar uchun qoidalar
+# ai-agent — agentlar uchun qoidalar
 
 Bu fayl loyihada kod yozadigan agentlar (agy, Claude Code) uchun. Odamlar uchun — README.md.
 

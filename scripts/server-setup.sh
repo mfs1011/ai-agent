@@ -55,8 +55,8 @@ sudo -u "${APP_USER}" -H bash -lc '~/.local/bin/agy --version' || { echo "agy o'
 log "agy xavfsiz sozlamalari (sandbox'dan tashqari fayl o'qish yo'q, xavfli buyruqlar taqiqlangan)"
 AGY_CFG="${APP_HOME}/.gemini/antigravity-cli"
 mkdir -p "${AGY_CFG}"
-if [ -f "${APP_HOME}/universal-agent/deploy/agy-settings.json" ]; then
-  cp "${APP_HOME}/universal-agent/deploy/agy-settings.json" "${AGY_CFG}/settings.json"
+if [ -f "${APP_HOME}/ai-agent/deploy/agy-settings.json" ]; then
+  cp "${APP_HOME}/ai-agent/deploy/agy-settings.json" "${AGY_CFG}/settings.json"
 fi
 chown -R "${APP_USER}:${APP_USER}" "${APP_HOME}/.gemini"
 
@@ -66,7 +66,7 @@ sudo -u "${APP_USER}" -H bash -lc 'pm2 install pm2-logrotate >/dev/null 2>&1 || 
 
 log "Kunlik zaxira: 03:30 da bazaning nusxasi, 14 kun saqlanadi"
 mkdir -p "${APP_HOME}/backups" && chown "${APP_USER}:${APP_USER}" "${APP_HOME}/backups"
-CRON_LINE="30 3 * * * sqlite3 ${APP_HOME}/universal-agent/data/agent.db \".backup '${APP_HOME}/backups/agent-\$(date +\\%F).db'\" && find ${APP_HOME}/backups -name 'agent-*.db' -mtime +14 -delete"
+CRON_LINE="30 3 * * * sqlite3 ${APP_HOME}/ai-agent/data/agent.db \".backup '${APP_HOME}/backups/agent-\$(date +\\%F).db'\" && find ${APP_HOME}/backups -name 'agent-*.db' -mtime +14 -delete"
 ( crontab -u "${APP_USER}" -l 2>/dev/null | grep -v 'agent.db' ; echo "${CRON_LINE}" ) | crontab -u "${APP_USER}" -
 
 log "Server tayyor"
