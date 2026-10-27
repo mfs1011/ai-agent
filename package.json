@@ -1,0 +1,27 @@
+{
+  "name": "ai-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Telegram orqali boshqariladigan universal shaxsiy AI agent",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/index.ts",
+    "dev": "node --watch --env-file-if-exists=.env src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@grammyjs/runner": "^2.0.3",
+    "@resvg/resvg-js": "^2.6.2",
+    "grammy": "^1.46.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  }
+}

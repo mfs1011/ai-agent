@@ -1,0 +1,20 @@
+{
+  "allowNonWorkspaceAccess": false,
+  "mode": "default",
+  "model": "Gemini 3.8 Flash (Low)",
+  "permissions": {
+    "allow": [],
+    "deny": [
+      "command(git push)",
+      "command(git merge)",
+      "command(git commit)",
+      "command(git reset)",
+      "command(gh)",
+      "command(rm)",
+      "command(curl)",
+      "command(wget)",
+      "command(ssh)",
+      "command(scp)"
+    ]
+  }
+}
